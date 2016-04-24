@@ -30,39 +30,23 @@ module.exports = yeoman.Base.extend({
 
   writing: {
     app: function () {
-      this.fs.copyTpl(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
+      this.template('_package.json', 'package.json',
         {title: this.props.title, author: this.props.author}
       );
-      this.fs.copy(
-        this.templatePath('.babelrc'),
-        this.destinationPath('.babelrc')
-      );
-      this.fs.copy(
-        this.templatePath('webpack.config.js'),
-        this.destinationPath('webpack.config.js')
-      );
-      this.fs.copy(
-        this.templatePath('.eslintrc.json'),
-        this.destinationPath('.eslintrc.json')
-      );
-      this.fs.copy(
-        this.templatePath('.gitignore'),
-        this.destinationPath('.gitignore')
-      );
-      this.fs.copy(
-        this.templatePath('.jscsrc'),
-        this.destinationPath('.jscsrc')
-      );
-      this.fs.copy(
-        this.templatePath('.scss-lint.yml'),
-        this.destinationPath('.scss-lint.yml')
-      );
-      this.fs.copy(
-        this.templatePath('LICENCE'),
-        this.destinationPath('LICENCE')
-      );
+
+      var baseFiles = [
+        'webpack.config.js',
+        '.babelrc',
+        '.eslintrc.json',
+        '.gitignore',
+        '.jscsrc',
+        '.scss-lint.yml',
+        'LICENCE'
+      ];
+
+      for (var i = 0; i < baseFiles.length; ++i) {
+        this.copy(baseFiles[i], baseFiles[i]);
+      }
     }
   },
 
