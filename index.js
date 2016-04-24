@@ -22,8 +22,15 @@ for (var i = 0; i < keys.length; ++i) {
   var sourceName = keys[i];
   var destName = baseFiles[keys[i]];
 
-  var data = fs.readFileSync(path.join(currentPath, 'templates', sourceName));
-  fs.writeFileSync(path.join(runningPath, destName));
+  var sourcePath = path.join(currentPath, 'templates', sourceName);
+  var destPath = path.join(runningPath, destName);
+
+  var data = fs.readFileSync(sourcePath).toString();
+
+  if (data.length === 0) {
+    console.log('Warning - Empty file: ' + destName);
+  }
+  fs.writeFileSync(destPath, data);
 
   console.log('Finished: ' + destName);
 }
