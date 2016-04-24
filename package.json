@@ -1,13 +1,13 @@
 {
   "name": "@joshuacaron/generator-scaffold",
-  "version": "0.1.3",
-  "description": "Personal yeoman generator.",
+  "version": "0.1.4",
   "homepage": "",
   "author": {
     "name": "Joshua Caron",
     "email": "joshua@joshuacaron.ca",
     "url": "joshuacaron.ca"
   },
+  "keywords": ["yeoman-generator"],
   "files": [
     "generators"
   ],

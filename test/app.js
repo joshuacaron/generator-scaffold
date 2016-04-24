@@ -12,7 +12,14 @@ describe('generator-scaffold:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'dummyfile.txt'
+      'webpack.config.js',
+      '.eslintrc.json',
+      'package.json',
+      '.babelrc',
+      '.gitignore',
+      '.jscsrc',
+      '.scss-lint.yml',
+      'LICENCE'
     ]);
   });
 });
