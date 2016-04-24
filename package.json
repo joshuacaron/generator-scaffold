@@ -13,7 +13,7 @@
   ],
   "main": "generators/index.js",
   "dependencies": {
-    "yeoman-generator": "^0.22.0",
+    "yeoman-generator": "^0.22.0"
   },
   "devDependencies": {
     "yeoman-test": "^1.0.0",
