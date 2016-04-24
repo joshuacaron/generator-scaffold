@@ -1,0 +1,12 @@
+{
+  "name": "<%= title %>",
+  "version": "0.1.0",
+  "description": "",
+  "author": "<%= author %>",
+  "main": "",
+  "scripts": {
+    },
+  "dependencies": {},
+  "devDependencies": {
+  }
+}
