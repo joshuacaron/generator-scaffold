@@ -1,3 +1,3 @@
-# @joshuacaron/generator-scaffold
+# @joshuacaron/scaffold
 
-A personal yeoman generator. Currently only creates dotfiles. More options are on the way in the future.
+A personal project generator. Currently only creates dotfiles. More options are on the way in the future.
